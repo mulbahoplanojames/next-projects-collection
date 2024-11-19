@@ -1,5 +1,8 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import Notification from "@/components/notifications";
+import SearchCom from "@/components/search";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
 import {
   DropdownMenuContent,
   DropdownMenuItem,
@@ -14,8 +17,9 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+
 import { DropdownMenu } from "@radix-ui/react-dropdown-menu";
-import { MessageCircleMore, UserRound } from "lucide-react";
+import { LogOut, MailCheck, MessageCircleMore, UserRound } from "lucide-react";
 
 export default function Page() {
   return (
@@ -27,8 +31,10 @@ export default function Page() {
             <SidebarTrigger className="-ml-1 " />
             <Separator orientation="vertical" className="mr-2 h-4" />
           </div>
-          <div className="">
+          <div className="flex items-center md:gap-10 gap-4">
+            <SearchCom />
             <Profile />
+            <Notification />
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
@@ -64,8 +70,14 @@ const Profile = () => {
           <MessageCircleMore size={36} />
           Message
         </DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
+        <DropdownMenuItem>
+          <MailCheck size={36} />
+          Notification
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <LogOut size={36} />
+          Logout
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
