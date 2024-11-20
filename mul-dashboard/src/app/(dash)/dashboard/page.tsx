@@ -14,11 +14,10 @@ export default function Page() {
           <ChartBar2 />
           <ChartBar />
         </div>
+        <div className=" grid md:grid-cols-4 grid-cols-1 gap-10">
+          <TeacherTable />
+        </div>
       </section>
-      <div className="md:px-6 px-2 grid md:grid-cols-2 grid-cols-1 gap-10 mt-12">
-        <TeacherTable />
-        <ChartBar />
-      </div>
     </>
   );
 }

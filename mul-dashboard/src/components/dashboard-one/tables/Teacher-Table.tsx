@@ -32,7 +32,7 @@ const TeacherTable = () => {
 
   return (
     <>
-      <section className="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-lg mt-12">
+      <section className="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-lg mt-12 col-span-4">
         {/* Search Input */}
         <div className="p-4 sm:p-6">
           <div className="mb-6 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
