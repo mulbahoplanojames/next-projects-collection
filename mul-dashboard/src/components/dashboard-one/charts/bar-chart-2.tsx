@@ -8,7 +8,13 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { Card, CardContent } from "../ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 type MonthlyData = {
   month: string;
@@ -42,12 +48,16 @@ const chartConfig = {
 export function ChartBar2() {
   return (
     <Card>
+      <CardHeader className="flex flex-row items-center justify-between">
+        <CardTitle>School Performance</CardTitle>
+        <CardDescription>January - May 2024</CardDescription>
+      </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
           <BarChart
             data={chartData}
             layout="vertical"
-            margin={{ left: 16, right: 16, top: 16, bottom: 16 }}
+            margin={{ left: 8, right: 8, top: 8, bottom: 8 }}
           >
             <YAxis
               dataKey="month"

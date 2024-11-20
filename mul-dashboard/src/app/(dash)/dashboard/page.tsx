@@ -1,17 +1,24 @@
 import DashboardHeader from "@/components/dash-header";
-import { ChartBar } from "@/components/dashboard-one/bar-chart";
-import { ChartBar2 } from "@/components/dashboard-one/bar-chart-2";
+import { ChartBar } from "@/components/dashboard-one/charts/bar-chart";
+import { ChartBar2 } from "@/components/dashboard-one/charts/bar-chart-2";
 import DashOneCardsWripper from "@/components/dashboard-one/dashOneCardsWripper";
+import TeacherTable from "@/components/dashboard-one/tables/Teacher-Table";
 
 export default function Page() {
   return (
-    <section className="md:px-6 px-0 py-6">
-      <DashboardHeader text="Dashboard" />
-      <DashOneCardsWripper />
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-12 md:px-1 ">
-        <ChartBar2 />
+    <>
+      <section className="md:px-6 px-1 py-6">
+        <DashboardHeader text="Dashboard" />
+        <DashOneCardsWripper />
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-12 md:px-1">
+          <ChartBar2 />
+          <ChartBar />
+        </div>
+      </section>
+      <div className="md:px-6 px-2 grid md:grid-cols-2 grid-cols-1 gap-10 mt-12">
+        <TeacherTable />
         <ChartBar />
       </div>
-    </section>
+    </>
   );
 }

@@ -1,3 +1,4 @@
+import { TeacherDataTypes } from "@/types/dashboardsTypes";
 import {
   LucideBook,
   LucideDollarSign,
@@ -41,3 +42,88 @@ const cardsData = [
 ];
 
 export default cardsData;
+
+export const teachersData: TeacherDataTypes[] = [
+  {
+    id: 1,
+    name: "John Doe",
+    department: "Science",
+    email: "xyz@email.com",
+    classname: "12A",
+    subject: "Biology",
+    rating: "4.5",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    department: "Mathematics",
+    email: "jane@email.com",
+    classname: "10B",
+    subject: "Algebra",
+    rating: "4.2",
+  },
+  {
+    id: 3,
+    name: "Alice Johnson",
+    department: "English",
+    email: "alice@email.com",
+    classname: "11C",
+    subject: "Literature",
+    rating: "4.7",
+  },
+  {
+    id: 4,
+    name: "David Brown",
+    department: "History",
+    email: "david@email.com",
+    classname: "12C",
+    subject: "World History",
+    rating: "5.0",
+  },
+  {
+    id: 5,
+    name: "Emily Wilson",
+    department: "Art",
+    email: "emily@email.com",
+    classname: "10B",
+    subject: "Painting",
+    rating: "4.3",
+  },
+  {
+    id: 6,
+    name: "Michael Lee",
+    department: "Physical Education",
+    email: "michael@email.com",
+    classname: "9A",
+    subject: "Basketball",
+    rating: "4.8",
+  },
+  {
+    id: 7,
+    name: "Emily Wilson",
+    department: "Art",
+    email: "emily@email.com",
+    classname: "6B",
+    subject: "Painting",
+    rating: "4.3",
+  },
+  {
+    id: 8,
+    name: "Alice Johnson",
+    department: "English",
+    email: "alice@email.com",
+    classname: "10D",
+    subject: "Literature",
+    rating: "4.7",
+  },
+  {
+    id: 9,
+
+    name: "Jane Smith",
+    department: "Mathematics",
+    email: "jane@email.com",
+    classname: "9B",
+    subject: "Algebra",
+    rating: "4.2",
+  },
+];

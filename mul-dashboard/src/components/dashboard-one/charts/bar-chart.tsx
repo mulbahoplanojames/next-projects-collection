@@ -8,7 +8,13 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { Card, CardContent } from "../ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../ui/card";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -33,6 +39,10 @@ const chartConfig = {
 export function ChartBar() {
   return (
     <Card>
+      <CardHeader className="flex flex-row items-center justify-between">
+        <CardTitle>School Overview</CardTitle>
+        <CardDescription>January - June 2024</CardDescription>
+      </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
           <BarChart accessibilityLayer data={chartData}>
