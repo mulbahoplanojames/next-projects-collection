@@ -8,7 +8,7 @@ export default function Page() {
     <section className="md:px-6 px-0 py-6">
       <DashboardHeader text="Dashboard" />
       <DashOneCardsWripper />
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-24 md:px-1 ">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-12 md:px-1 ">
         <ChartBar2 />
         <ChartBar />
       </div>

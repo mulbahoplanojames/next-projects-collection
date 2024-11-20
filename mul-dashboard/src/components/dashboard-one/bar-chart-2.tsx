@@ -8,6 +8,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { Card, CardContent } from "../ui/card";
 
 type MonthlyData = {
   month: string;
@@ -40,35 +41,39 @@ const chartConfig = {
 
 export function ChartBar2() {
   return (
-    <ChartContainer config={chartConfig}>
-      <BarChart
-        data={chartData}
-        layout="vertical"
-        margin={{ left: 16, right: 16, top: 16, bottom: 16 }}
-      >
-        <YAxis
-          dataKey="month"
-          type="category"
-          tickLine={false}
-          tickMargin={10}
-          axisLine={false}
-          tickFormatter={(value) => value.slice(0, 3)}
-        />
-        <XAxis
-          dataKey="visitors"
-          type="number"
-          axisLine={false}
-          tickLine={false}
-        />
-        <ChartTooltip content={<ChartTooltipContent />} />
-        <Bar
-          dataKey="visitors"
-          fill={chartConfig.visitors.color}
-          radius={[0, 4, 4, 0]}
-          fillOpacity={0.9}
-          fill={(entry) => entry.fill}
-        />
-      </BarChart>
-    </ChartContainer>
+    <Card>
+      <CardContent>
+        <ChartContainer config={chartConfig}>
+          <BarChart
+            data={chartData}
+            layout="vertical"
+            margin={{ left: 16, right: 16, top: 16, bottom: 16 }}
+          >
+            <YAxis
+              dataKey="month"
+              type="category"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+              tickFormatter={(value) => value.slice(0, 3)}
+            />
+            <XAxis
+              dataKey="visitors"
+              type="number"
+              axisLine={false}
+              tickLine={false}
+            />
+            <ChartTooltip content={<ChartTooltipContent />} />
+            <Bar
+              dataKey="visitors"
+              fill={chartConfig.visitors.color}
+              radius={[0, 4, 4, 0]}
+              fillOpacity={0.9}
+              fill={(entry) => entry.fill}
+            />
+          </BarChart>
+        </ChartContainer>
+      </CardContent>
+    </Card>
   );
 }

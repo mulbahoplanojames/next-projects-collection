@@ -4,7 +4,7 @@ import React from "react";
 const DashboardHeader = ({ text }: { text: string }) => {
   return (
     <>
-      <div className="flex items-center justify-between mb-8">
+      <section className="flex items-center justify-between mb-12 mt-2">
         <h1 className="md:text-2xl text-xl font-bold">{text}</h1>
 
         {/* Link back to Home */}
@@ -19,7 +19,7 @@ const DashboardHeader = ({ text }: { text: string }) => {
           <ChevronRight className="text-gray-400" />
           <span className="text-base text-black">Dashboard</span>
         </div>
-      </div>
+      </section>
     </>
   );
 };
