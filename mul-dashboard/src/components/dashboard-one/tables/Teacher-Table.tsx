@@ -12,6 +12,7 @@ import {
 import { teachersData } from "@/data/dashboardOne/data";
 
 import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
 
 const TeacherTable = () => {
   const [search, setSearch] = useState("");
@@ -94,7 +95,23 @@ const TeacherTable = () => {
                             {teacher.name}
                           </TableCell>
                           <TableCell className="py-3 px-4 whitespace-nowrap">
-                            {teacher.department}
+                            <Badge
+                              className={`${
+                                teacher.department === "Science"
+                                  ? "bg-green-500"
+                                  : teacher.department === "Mathematics"
+                                  ? "bg-red-500"
+                                  : teacher.department === "English"
+                                  ? "bg-[#ffc269]"
+                                  : teacher.department === "History"
+                                  ? "bg-blue-500"
+                                  : teacher.department === "Art"
+                                  ? "bg-purple-700"
+                                  : ""
+                              }`}
+                            >
+                              {teacher.department}
+                            </Badge>
                           </TableCell>
                           <TableCell className="py-3 px-4 whitespace-nowrap">
                             {teacher.email}

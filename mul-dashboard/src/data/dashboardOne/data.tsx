@@ -130,23 +130,23 @@ export const teachersData: TeacherDataTypes[] = [
 
 // ------------------------------------------------------------------------------------------
 
-const paid = (
-  <button className="cursor-text px-2 py-1 text-base text-white bg-green-500 rounded-sm">
-    Paid
-  </button>
-);
+// const paid = (
+//   <button className="cursor-text px-2 py-1 text-base bg-green-500 rounded-sm">
+//     Paid
+//   </button>
+// );
 
-const unpaid = (
-  <button className="cursor-text px-2 py-1 text-base text-white bg-red-500 rounded-sm">
-    Unpaid
-  </button>
-);
+// const unpaid = (
+//   <button className="cursor-text px-2 py-1 text-base  bg-red-500 rounded-sm">
+//     Unpaid
+//   </button>
+// );
 
-const unpaid2 = (
-  <button className="bg-[#ffc269] text-white rounded-sm text-base py-1 px-2 cursor-text">
-    Unpaid
-  </button>
-);
+// const "unpaid2" = (
+//   <button className="bg-[#ffc269]  rounded-sm text-base py-1 px-2 cursor-text">
+//     Unpaid
+//   </button>
+// );
 export const newStudentsData = [
   {
     id: 1,
@@ -155,7 +155,7 @@ export const newStudentsData = [
     assignedprofessor: "Kenny Josh",
     dateofadmit: "27/05/2016",
     brance: "Commerce",
-    fees: paid,
+    fees: "paid",
   },
   {
     id: 2,
@@ -164,7 +164,7 @@ export const newStudentsData = [
     assignedprofessor: "Mark",
     dateofadmit: "26/05/2017",
     brance: "Mechanical",
-    fees: unpaid,
+    fees: "unpaid",
   },
   {
     id: 3,
@@ -173,7 +173,7 @@ export const newStudentsData = [
     assignedprofessor: "Cinnabar",
     dateofadmit: "21/05/2016",
     brance: "Science",
-    fees: paid,
+    fees: "paid",
   },
   {
     id: 4,
@@ -182,7 +182,7 @@ export const newStudentsData = [
     assignedprofessor: "Felix",
     dateofadmit: "20/04/2016",
     brance: "Commerce",
-    fees: unpaid2,
+    fees: "incomplete",
   },
   {
     id: 5,
@@ -191,7 +191,7 @@ export const newStudentsData = [
     assignedprofessor: "Beryl",
     dateofadmit: "24/05/2016",
     brance: "Mechanical",
-    fees: paid,
+    fees: "paid",
   },
   {
     id: 6,
@@ -200,7 +200,7 @@ export const newStudentsData = [
     assignedprofessor: "Joshep",
     dateofadmit: "22/05/2016",
     brance: "M.B.A.",
-    fees: unpaid,
+    fees: "unpaid",
   },
   {
     id: 7,
@@ -209,7 +209,7 @@ export const newStudentsData = [
     assignedprofessor: "Sharma",
     dateofadmit: "18/06/2016",
     brance: "Science",
-    fees: paid,
+    fees: "paid",
   },
   {
     id: 8,
@@ -218,7 +218,7 @@ export const newStudentsData = [
     assignedprofessor: "Jayesh",
     dateofadmit: "17/05/2016",
     brance: "Commerce",
-    fees: unpaid2,
+    fees: "incomplete",
   },
   {
     id: 9,
@@ -227,6 +227,6 @@ export const newStudentsData = [
     assignedprofessor: "Mathematics",
     dateofadmit: "17/05/2016",
     brance: "Mechanical",
-    fees: paid,
+    fees: "paid",
   },
 ];

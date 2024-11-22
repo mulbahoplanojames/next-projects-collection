@@ -12,6 +12,7 @@ import {
 import { newStudentsData } from "@/data/dashboardOne/data";
 
 import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
 
 const NewStudentsTable = () => {
   const [search, setSearch] = useState("");
@@ -64,19 +65,16 @@ const NewStudentsTable = () => {
                         Name
                       </TableCell>
                       <TableCell className="font-semibold text-gray-600 dark:text-gray-400 py-3 px-4 whitespace-nowrap">
-                        Department
+                        Assigned Professor
                       </TableCell>
                       <TableCell className="font-semibold text-gray-600 dark:text-gray-400 py-3 px-4 whitespace-nowrap">
-                        Email
+                        Date Of Admit
                       </TableCell>
                       <TableCell className="font-semibold text-gray-600 dark:text-gray-400 py-3 px-4 whitespace-nowrap">
-                        Class
+                        Fees
                       </TableCell>
                       <TableCell className="font-semibold text-gray-600 dark:text-gray-400 py-3 px-4 whitespace-nowrap">
-                        Subject
-                      </TableCell>
-                      <TableCell className="font-semibold text-gray-600 dark:text-gray-400 py-3 px-4 whitespace-nowrap">
-                        Rating
+                        Branch
                       </TableCell>
                     </TableRow>
                   </TableHeader>
@@ -99,8 +97,20 @@ const NewStudentsTable = () => {
                           <TableCell className="py-3 px-4 whitespace-nowrap">
                             {student.dateofadmit}
                           </TableCell>
-                          <TableCell className="py-3 px-4 whitespace-nowrap">
-                            {student.fees}
+                          <TableCell className="py-3 px-4 whitespace-nowrap ">
+                            <Badge
+                              className={`${
+                                student.fees === "paid"
+                                  ? "bg-green-500"
+                                  : student.fees === "unpaid"
+                                  ? "bg-red-500"
+                                  : student.fees === "incomplete"
+                                  ? "bg-[#ffc269]"
+                                  : ""
+                              }`}
+                            >
+                              {student.fees}
+                            </Badge>
                           </TableCell>
                           <TableCell className="py-3 px-4 whitespace-nowrap">
                             {student.brance}
