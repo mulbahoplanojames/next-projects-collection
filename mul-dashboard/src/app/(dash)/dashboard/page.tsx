@@ -1,4 +1,3 @@
-import CalendarCom from "@/components/Calendar";
 import DashboardHeader from "@/components/dash-header";
 import { ChartBar } from "@/components/dashboard-one/charts/bar-chart";
 import { ChartBar2 } from "@/components/dashboard-one/charts/bar-chart-2";
@@ -6,7 +5,7 @@ import DashOneCardsWripper from "@/components/dashboard-one/dashOneCardsWripper"
 import NewStudentsTable from "@/components/dashboard-one/tables/NewStudents-Table";
 import TeacherTable from "@/components/dashboard-one/tables/Teacher-Table";
 
-export default function Page() {
+export default function Dashboard1() {
   return (
     <>
       <section className="md:px-6 px-1 py-6">

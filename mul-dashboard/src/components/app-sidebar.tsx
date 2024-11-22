@@ -44,15 +44,15 @@ const data = {
       items: [
         {
           title: "Dashboard 1",
-          url: "#",
+          url: "/dashboard",
         },
         {
           title: "Dashboard 2",
-          url: "#",
+          url: "/dashboard2",
         },
         {
           title: "Dashboard 3",
-          url: "#",
+          url: "/dashboard3",
         },
       ],
     },

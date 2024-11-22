@@ -8,3 +8,11 @@ export type TeacherDataTypes = {
   subject: string;
   rating: string;
 };
+
+export type dashTwoCardTypes = {
+  id: number;
+  label: string;
+  number: string;
+  percentage: string;
+  icon: React.ReactNode;
+};
