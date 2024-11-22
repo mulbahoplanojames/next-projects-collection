@@ -128,25 +128,6 @@ export const teachersData: TeacherDataTypes[] = [
   },
 ];
 
-// ------------------------------------------------------------------------------------------
-
-// const paid = (
-//   <button className="cursor-text px-2 py-1 text-base bg-green-500 rounded-sm">
-//     Paid
-//   </button>
-// );
-
-// const unpaid = (
-//   <button className="cursor-text px-2 py-1 text-base  bg-red-500 rounded-sm">
-//     Unpaid
-//   </button>
-// );
-
-// const "unpaid2" = (
-//   <button className="bg-[#ffc269]  rounded-sm text-base py-1 px-2 cursor-text">
-//     Unpaid
-//   </button>
-// );
 export const newStudentsData = [
   {
     id: 1,

@@ -38,12 +38,12 @@ const chartConfig = {
 
 export function ChartBar() {
   return (
-    <Card>
+    <Card className="w-full h-full">
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle>School Overview</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="w-full h-full">
         <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />

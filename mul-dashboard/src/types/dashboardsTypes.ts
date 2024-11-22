@@ -10,7 +10,7 @@ export type TeacherDataTypes = {
 };
 
 export type dashTwoCardTypes = {
-  id: number;
+  id?: number;
   label: string;
   number: string;
   percentage: string;
