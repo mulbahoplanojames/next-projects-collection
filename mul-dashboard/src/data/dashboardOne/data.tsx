@@ -127,3 +127,106 @@ export const teachersData: TeacherDataTypes[] = [
     rating: "4.2",
   },
 ];
+
+// ------------------------------------------------------------------------------------------
+
+const paid = (
+  <button className="cursor-text px-2 py-1 text-base text-white bg-green-500 rounded-sm">
+    Paid
+  </button>
+);
+
+const unpaid = (
+  <button className="cursor-text px-2 py-1 text-base text-white bg-red-500 rounded-sm">
+    Unpaid
+  </button>
+);
+
+const unpaid2 = (
+  <button className="bg-[#ffc269] text-white rounded-sm text-base py-1 px-2 cursor-text">
+    Unpaid
+  </button>
+);
+export const newStudentsData = [
+  {
+    id: 1,
+    number: "1",
+    name: "	Jens Brincker",
+    assignedprofessor: "Kenny Josh",
+    dateofadmit: "27/05/2016",
+    brance: "Commerce",
+    fees: paid,
+  },
+  {
+    id: 2,
+    number: "2",
+    name: "Mark Hay",
+    assignedprofessor: "Mark",
+    dateofadmit: "26/05/2017",
+    brance: "Mechanical",
+    fees: unpaid,
+  },
+  {
+    id: 3,
+    number: "3",
+    name: "	Anthony Davie",
+    assignedprofessor: "Cinnabar",
+    dateofadmit: "21/05/2016",
+    brance: "Science",
+    fees: paid,
+  },
+  {
+    id: 4,
+    number: "4",
+    name: "David Perry",
+    assignedprofessor: "Felix",
+    dateofadmit: "20/04/2016",
+    brance: "Commerce",
+    fees: unpaid2,
+  },
+  {
+    id: 5,
+    number: "5",
+    name: "Anthony Davie",
+    assignedprofessor: "Beryl",
+    dateofadmit: "24/05/2016",
+    brance: "Mechanical",
+    fees: paid,
+  },
+  {
+    id: 6,
+    number: "6",
+    name: "Alan Gilchrist",
+    assignedprofessor: "Joshep",
+    dateofadmit: "22/05/2016",
+    brance: "M.B.A.",
+    fees: unpaid,
+  },
+  {
+    id: 7,
+    number: "7",
+    name: "Emily Wilson",
+    assignedprofessor: "Sharma",
+    dateofadmit: "18/06/2016",
+    brance: "Science",
+    fees: paid,
+  },
+  {
+    id: 8,
+    number: "8",
+    name: "Alice Johnson",
+    assignedprofessor: "Jayesh",
+    dateofadmit: "17/05/2016",
+    brance: "Commerce",
+    fees: unpaid2,
+  },
+  {
+    id: 9,
+    number: "9",
+    name: "Jane Smith",
+    assignedprofessor: "Mathematics",
+    dateofadmit: "17/05/2016",
+    brance: "Mechanical",
+    fees: paid,
+  },
+];
