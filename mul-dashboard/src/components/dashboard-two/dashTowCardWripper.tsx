@@ -2,7 +2,6 @@ import { dashTwocardData } from "@/data/dashboardTwo/data";
 import DashTwoCard from "./Card";
 import { dashTwoCardTypes } from "@/types/dashboardsTypes";
 import { ChartBar } from "../dashboard-one/charts/bar-chart";
-import TeacherTable from "../dashboard-one/tables/Teacher-Table";
 
 const DashTwoCardWripper = () => {
   return (
@@ -23,7 +22,6 @@ const DashTwoCardWripper = () => {
         <div className="w-full col-span-2">
           <ChartBar />
         </div>
-        <TeacherTable />
       </section>
     </>
   );

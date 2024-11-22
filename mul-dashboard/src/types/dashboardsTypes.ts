@@ -16,3 +16,11 @@ export type dashTwoCardTypes = {
   percentage: string;
   icon: React.ReactNode;
 };
+
+export type professorsListTypes = {
+  id: number;
+  name: string;
+  status: string;
+  color: string;
+  avatar: string;
+};

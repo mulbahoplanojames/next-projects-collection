@@ -3,7 +3,7 @@ import { dashTwoCardTypes } from "@/types/dashboardsTypes";
 const DashTwoCard = ({ label, number, percentage, icon }: dashTwoCardTypes) => {
   return (
     <>
-      <div className=" w-full h-fit bg-white rounded-lg p-6 shadow-lg">
+      <div className=" w-full h-fit bg-white dark:bg-gray-950 rounded-lg p-6 shadow-lg">
         <div className="flex items-center gap-y-5 gap-x-4 md:pb-2 pb-1">
           <p className="md:text-[23px] text-xl font-bold">{label}</p>
           <p className="md:text-6xl text-4xl">{icon}</p>
