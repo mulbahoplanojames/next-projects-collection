@@ -38,7 +38,7 @@ const NewStudentsTable = () => {
         <div className="p-4 sm:p-6">
           <div className="mb-6 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
             <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-              Teachers Details
+              New Students List
             </h1>
             <Input
               type="text"
