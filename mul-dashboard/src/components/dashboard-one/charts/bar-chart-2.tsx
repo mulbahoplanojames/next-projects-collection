@@ -45,11 +45,11 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function ChartBar2() {
+export function ChartBar2({ text }: { text: string }) {
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>School Performance</CardTitle>
+        <CardTitle>{text}</CardTitle>
         <CardDescription>January - May 2024</CardDescription>
       </CardHeader>
       <CardContent>

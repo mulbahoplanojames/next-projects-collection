@@ -13,8 +13,8 @@ const Dashboar2 = () => {
         <DashTwoCardWripper />
         <TeacherTable />
         <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-12 md:px-1">
-          <ChartBar2 text={"School Performance"} />
-          <ChartBar text={"School Overview"} />
+          <ChartBar2 text={"Overall Metrics"} />
+          <ChartBar text={"Students Performance"} />
         </div>
       </section>
     </>

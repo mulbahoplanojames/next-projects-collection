@@ -12,8 +12,8 @@ export default function Dashboard1() {
         <DashboardHeader text="Dashboard" />
         <DashOneCardsWripper />
         <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-12 md:px-1">
-          <ChartBar2 />
-          <ChartBar />
+          <ChartBar2 text={"School Performance"} />
+          <ChartBar text={"School Overview"} />
         </div>
         <div className=" grid md:grid-cols-4 grid-cols-1 gap-10">
           <TeacherTable />
