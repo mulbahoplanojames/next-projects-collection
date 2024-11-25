@@ -10,7 +10,7 @@ const DashTwoCardWripper = () => {
         <div className="grid md:grid-cols-2 grid-cols-2  items-center  gap-x-6 gap-y-5 px-1 col-span-3">
           {dashTwocardData.map((data: dashTwoCardTypes) => (
             <DashTwoCard
-              // Unique key for each card component
+              // Unique key for each card componentDashboardThreeCardWripper
               key={data.id}
               label={data.label}
               number={data.number}
@@ -20,7 +20,7 @@ const DashTwoCardWripper = () => {
           ))}
         </div>
         <div className="w-full col-span-2">
-          <ChartBar />
+          <ChartBar text="School Performance" />
         </div>
       </section>
     </>

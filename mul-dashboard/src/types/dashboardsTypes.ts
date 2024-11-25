@@ -1,3 +1,6 @@
+import { LucideProps } from "lucide-react";
+import { RefAttributes } from "react";
+
 export type TeacherDataTypes = {
   id: number;
   name: string;
@@ -23,4 +26,13 @@ export type professorsListTypes = {
   status: string;
   color: string;
   avatar: string;
+};
+
+export type dashThreeCardTypes = {
+  label: string;
+  count: number;
+  color: string;
+  icon: React.ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+  >;
 };
