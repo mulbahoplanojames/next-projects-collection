@@ -14,7 +14,6 @@ import { Input } from "@/components/ui/input";
 import allStudentsTableData from "@/data/all-students/data";
 import Image from "next/image";
 import DeleteButton from "../DeleteBtton";
-import { Edit } from "lucide-react";
 import EditButton from "../EditButton";
 
 const AllStudentsTable = () => {
