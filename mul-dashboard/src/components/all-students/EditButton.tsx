@@ -18,13 +18,14 @@ const EditButton = () => {
     <>
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="outline">Edit Profile</Button>
+          <Button className=" bg-white">Edit Profile</Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
             <DialogTitle>Edit profile</DialogTitle>
             <DialogDescription>
-              Make changes to your profile here. Click save when you're done.
+              Make changes to your profile here and Click save when you&apos;re
+              done.
             </DialogDescription>
           </DialogHeader>
           <div className="grid gap-4 py-4">
@@ -32,13 +33,19 @@ const EditButton = () => {
               <Label htmlFor="name" className="text-right">
                 Name
               </Label>
-              <Input id="name" value="Pedro Duarte" className="col-span-3" />
+              <Input id="name" className="col-span-3" />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="username" className="text-right">
                 Username
               </Label>
-              <Input id="username" value="@peduarte" className="col-span-3" />
+              <Input id="username" className="col-span-3" />
+            </div>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="username" className="text-right">
+                Email
+              </Label>
+              <Input id="email" className="col-span-3" />
             </div>
           </div>
           <DialogFooter>
