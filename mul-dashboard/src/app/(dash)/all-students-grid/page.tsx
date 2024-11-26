@@ -8,7 +8,7 @@ const AllStudentsGridView = () => {
   return (
     <>
       <section className="md:px-6 px-1 py-6">
-        <DashboardHeader text="All Students List" />
+        <DashboardHeader text="All Students List Grid" />
         <div className="space-x-4">
           <Link
             href={"./all-students"}

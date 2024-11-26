@@ -9,7 +9,7 @@ const StudentCard = (props: allStudentsGridViewTypes) => {
   // Rendering a single card using the passed properties
   return (
     <>
-      <div className="w-full h-fit bg-white text-center shadow-2xl  rounded-md py-4 px-6 ">
+      <div className="w-full h-fit text-center shadow-2xl dark:bg-slate-950  rounded-md py-4 px-6 ">
         <div className="avatar">
           <div className="w-24 rounded-full ring ring-neutral-500 ring-offset-2 ring-offset-neutral-500">
             <Image src={avatar} alt={name} />
@@ -20,7 +20,7 @@ const StudentCard = (props: allStudentsGridViewTypes) => {
         <p className="pb-1">{location}</p>
         <p className="pb-4">{city}</p>
         <p className="pb-3">{contact}</p>
-        <Link href={"/"}>
+        <Link href="">
           <button className="py-1 px-4 rounded-full bg-[#e91e63] text-white shadow-md">
             Read More
           </button>
