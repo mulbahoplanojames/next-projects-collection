@@ -1,3 +1,4 @@
+import { allStudentsGridViewTypes } from "@/types/dashboardsTypes";
 import avatar1 from "/public/user1.jpg";
 import avatar2 from "/public/user2.jpg";
 import avatar3 from "/public/user3.jpg";
@@ -262,3 +263,115 @@ const allStudentsTableData = [
 ];
 
 export default allStudentsTableData;
+
+export const allStudentsGridViewData: allStudentsGridViewTypes[] = [
+  {
+    id: 1,
+    avatar: avatar7,
+    name: "John Smith",
+    subject: "Mathematics",
+    location: "123 Main Street, Otherville, CA, 90210 (-122.4194)",
+    city: "Anytown",
+    contact: "+1 (123) 456-7890",
+  },
+
+  {
+    id: 2,
+    avatar: avatar2,
+    name: "Alice Johnson",
+    subject: "Physics",
+    location: "456 Elm Street, Maplewood, NY, 10001 (-118.2437)",
+    city: "Otherville",
+    contact: "+1 (987) 654-3210",
+  },
+  {
+    id: 3,
+    avatar: avatar6,
+    name: "Michael Brown",
+    subject: "Biology",
+    location: "789 Oak Avenue, Springside, IL, 60601 (-74.0060)",
+    city: "Maplewood",
+    contact: "+1 (345) 678-9012",
+  },
+  {
+    id: 4,
+    avatar: avatar3,
+    name: "Emily Wilson",
+    subject: "Chemistry",
+    location: "555 Cedar Lane, Riverdale, CA, 90210 (-118.2437)",
+    city: "Springside",
+    contact: "+1 (901) 234-5678",
+  },
+  {
+    id: 5,
+    avatar: avatar8,
+    name: "David Lee",
+    subject: "Computer Science",
+    location: "777 Willow Drive, Hilltop, IL, 60601 (-74.0060)",
+    city: "Riverdale",
+    contact: "+1 (567) 890-1234",
+  },
+  {
+    id: 6,
+    avatar: avatar6,
+    name: "Sarah Taylor",
+    subject: "History",
+    location: "888 Birch Street, Lakeside, CA, 90210 (-122.4194)",
+    city: "Hilltop",
+    contact: "+1 (234) 567-8901",
+  },
+  {
+    id: 7,
+    avatar: avatar9,
+    name: "Kevin Martinez",
+    subject: "English",
+    location: "999 Spruce Avenue, Meadowbrook, CA, 90210 (-122.4194)",
+    city: "Lakeside",
+    contact: "+1 (678) 901-2345",
+  },
+  {
+    id: 8,
+    avatar: avatar7,
+    name: "Sophia Garcia",
+    subject: "Art",
+    location: "1010 Magnolia Road, Woodland, NY, 10001 (-118.2437)",
+    city: "Meadowbrook",
+    contact: "+1 (012) 345-6789",
+  },
+  {
+    id: 9,
+    avatar: avatar4,
+    name: "Daniel Hernandez",
+    subject: "Music",
+    location: "1111 Cedar Lane, Mountainview, CA, 90210 (-122.4194)",
+    city: "Woodland",
+    contact: "+1 (890) 123-4567",
+  },
+  {
+    id: 10,
+    avatar: avatar6,
+    name: "Olivia Perez",
+    subject: "Geography",
+    location: "1212 Willow Drive, Hillsboro, NY, 10001 (-118.2437)",
+    city: "Mountainview",
+    contact: "+1 (456) 789-0123",
+  },
+  {
+    id: 11,
+    avatar: avatar1,
+    name: "William Nguyen",
+    subject: "Economics",
+    location: "123 Main Street, Otherville, CA, 90210 (-122.4194)",
+    city: "Hillsboro",
+    contact: "+1 (567) 890-1234",
+  },
+  {
+    id: 12,
+    avatar: avatar5,
+    name: "Kevin Martinez",
+    subject: "English",
+    location: "999 Spruce Avenue, Meadowbrook, CA, 90210 (-122.4194)",
+    city: "Lakeside",
+    contact: "+1 (678) 901-2345",
+  },
+];

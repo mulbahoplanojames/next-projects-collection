@@ -1,4 +1,5 @@
 import { LucideProps } from "lucide-react";
+import { StaticImageData } from "next/image";
 import { RefAttributes } from "react";
 
 export type TeacherDataTypes = {
@@ -35,4 +36,14 @@ export type dashThreeCardTypes = {
   icon: React.ForwardRefExoticComponent<
     Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
   >;
+};
+
+export type allStudentsGridViewTypes = {
+  id: number;
+  avatar: StaticImageData;
+  name: string;
+  subject: string;
+  location: string;
+  city: string;
+  contact: string;
 };

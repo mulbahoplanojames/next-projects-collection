@@ -12,13 +12,16 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 import { Button } from "@/components/ui/button";
+import { UserPen } from "lucide-react";
 
 const EditButton = () => {
   return (
     <>
       <Dialog>
         <DialogTrigger asChild>
-          <Button className=" bg-white">Edit Profile</Button>
+          <Button className=" bg-white">
+            <UserPen size={28} className="text-black" />
+          </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>

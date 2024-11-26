@@ -15,6 +15,7 @@ import allStudentsTableData from "@/data/all-students/data";
 import Image from "next/image";
 import DeleteButton from "../DeleteBtton";
 import EditButton from "../EditButton";
+import ViewButton from "../ViewButton";
 
 const AllStudentsTable = () => {
   const [search, setSearch] = useState("");
@@ -126,9 +127,7 @@ const AllStudentsTable = () => {
                           <TableCell className="py-3 px-4 whitespace-nowrap">
                             <div className="flex gap-2">
                               <EditButton />
-                              <button className="btn btn-secondary btn-sm">
-                                View
-                              </button>
+                              <ViewButton />
                               <DeleteButton />
                             </div>
                           </TableCell>
