@@ -39,7 +39,7 @@ export type dashThreeCardTypes = {
 };
 
 export type allStudentsGridViewTypes = {
-  id: number;
+  id?: number;
   avatar: StaticImageData;
   name: string;
   subject: string;
