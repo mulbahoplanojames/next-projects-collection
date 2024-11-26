@@ -63,15 +63,15 @@ const data = {
       items: [
         {
           title: "All Students",
-          url: "#",
+          url: "/all-students",
         },
         {
           title: "Add Student",
-          url: "#",
+          url: "/add-student",
         },
         {
           title: "Edit Student",
-          url: "#",
+          url: "/edit-student",
         },
       ],
     },
