@@ -8,19 +8,23 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
+import { Button } from "@/components/ui/button";
 import { teachersData } from "@/data/dashboardOne/data";
-
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+
+// Define the number of items per page if i forget in the future :)
+const ITEMS_PER_PAGE = 8;
 
 const TeacherTable = () => {
   const [search, setSearch] = useState("");
   const [filteredTeachers, setFilteredTeachers] = useState(teachersData);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.toLowerCase();
     setSearch(value);
+    setCurrentPage(1);
 
     const filtered = teachersData.filter(
       (teacher) =>
@@ -31,10 +35,19 @@ const TeacherTable = () => {
     setFilteredTeachers(filtered);
   };
 
+  // The below code is to Calculate pagination values just in case i forget in the future :)
+  const totalPages = Math.ceil(filteredTeachers.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const currentTeachers = filteredTeachers.slice(startIndex, endIndex);
+
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <>
       <section className="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-lg mt-12 col-span-4">
-        {/* Search Input */}
         <div className="p-4 sm:p-6">
           <div className="mb-6 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
             <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
@@ -49,10 +62,7 @@ const TeacherTable = () => {
             />
           </div>
 
-          {/* Table Container with horizontal scroll */}
           <div className="-mx-4 sm:-mx-6">
-            {" "}
-            {/* Negative margin to extend to edges */}
             <div className="inline-block w-full align-middle">
               <div className="overflow-x-auto border-x border-gray-200 dark:border-gray-700">
                 <Table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -82,8 +92,8 @@ const TeacherTable = () => {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {filteredTeachers.length > 0 ? (
-                      filteredTeachers.map((teacher) => (
+                    {currentTeachers.length > 0 ? (
+                      currentTeachers.map((teacher) => (
                         <TableRow
                           key={teacher.id}
                           className="hover:bg-gray-100 dark:hover:bg-gray-700 transition"
@@ -142,6 +152,46 @@ const TeacherTable = () => {
               </div>
             </div>
           </div>
+
+          {filteredTeachers.length > 0 && (
+            <div className="flex items-center justify-between mt-4 px-4">
+              <div className="text-sm text-gray-700 dark:text-gray-300">
+                Showing {startIndex + 1} to{" "}
+                {Math.min(endIndex, filteredTeachers.length)} of{" "}
+                {filteredTeachers.length} teachers
+              </div>
+              <div className="flex gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                >
+                  Previous
+                </Button>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                  (pageNum) => (
+                    <Button
+                      key={pageNum}
+                      variant={pageNum === currentPage ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => handlePageChange(pageNum)}
+                    >
+                      {pageNum}
+                    </Button>
+                  )
+                )}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                >
+                  Next
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </>

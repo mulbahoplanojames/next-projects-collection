@@ -8,31 +8,44 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
 import allStudentsTableData from "@/data/all-students/data";
 import Image from "next/image";
 import DeleteButton from "../DeleteBtton";
 import EditButton from "../EditButton";
 import ViewButton from "../ViewButton";
 
+// Define the number of items per page if i forget in the future :)
+const ITEMS_PER_PAGE = 8;
+
 const AllStudentsTable = () => {
   const [search, setSearch] = useState("");
-  const [filteredTeachers, setFilteredTeachers] =
+  const [currentPage, setCurrentPage] = useState(1);
+  const [filteredStudents, setFilteredStudents] =
     useState(allStudentsTableData);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.toLowerCase();
     setSearch(value);
+    setCurrentPage(1);
 
     const filtered = allStudentsTableData.filter(
       (student) =>
         student.name.toLowerCase().includes(value) ||
-        student.name.toLowerCase().includes(value) ||
         student.department.toLowerCase().includes(value)
     );
-    setFilteredTeachers(filtered);
+    setFilteredStudents(filtered);
+  };
+
+  // The below code is to Calculate pagination values just in case i forget in the future :)
+  const totalPages = Math.ceil(filteredStudents.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const currentStudents = filteredStudents.slice(startIndex, endIndex);
+
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
   };
 
   return (
@@ -55,8 +68,6 @@ const AllStudentsTable = () => {
 
           {/* Table Container with horizontal scroll */}
           <div className="-mx-4 sm:-mx-6">
-            {" "}
-            {/* Negative margin to extend to edges */}
             <div className="inline-block w-full align-middle">
               <div className="overflow-x-auto border-x border-gray-200 dark:border-gray-700">
                 <Table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -89,8 +100,8 @@ const AllStudentsTable = () => {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {filteredTeachers.length > 0 ? (
-                      filteredTeachers.map((student) => (
+                    {currentStudents.length > 0 ? (
+                      currentStudents.map((student) => (
                         <TableRow
                           key={student.id}
                           className="hover:bg-gray-100 dark:hover:bg-gray-700 transition"
@@ -136,10 +147,10 @@ const AllStudentsTable = () => {
                     ) : (
                       <TableRow>
                         <TableCell
-                          colSpan={7}
+                          colSpan={8}
                           className="text-center py-3 px-4 text-gray-500"
                         >
-                          No teachers found.
+                          No students found.
                         </TableCell>
                       </TableRow>
                     )}
@@ -148,6 +159,47 @@ const AllStudentsTable = () => {
               </div>
             </div>
           </div>
+
+          {/* Pagination Controls */}
+          {filteredStudents.length > 0 && (
+            <div className="flex items-center justify-between mt-4 px-4">
+              <div className="text-sm text-gray-700 dark:text-gray-300">
+                Showing {startIndex + 1} to{" "}
+                {Math.min(endIndex, filteredStudents.length)} of{" "}
+                {filteredStudents.length} students
+              </div>
+              <div className="flex gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                >
+                  Previous
+                </Button>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                  (pageNum) => (
+                    <Button
+                      key={pageNum}
+                      variant={pageNum === currentPage ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => handlePageChange(pageNum)}
+                    >
+                      {pageNum}
+                    </Button>
+                  )
+                )}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                >
+                  Next
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </>
