@@ -16,5 +16,4 @@ export const addStudentSchema = z.object({
   birth_date: z.date(),
   blood_group: z.string(),
   address: z.string(),
-  section: z.string().min(3, "Section must be at least 3 characters long"),
 });
