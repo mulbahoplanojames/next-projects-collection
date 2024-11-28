@@ -1,12 +1,10 @@
+"use client";
+
+import { useForm } from "react-hook-form";
 import { Card, CardContent, CardTitle } from "../ui/card";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addStudentSchema } from "@/lib/Zod_Schema";
-// import { useForm,  } from "react-hook-form";
-
-import { SubmitHandler } from "react-hook-form";
-import { useForm } from "react-hook-form";
-
 import {
   Form,
   FormControl,
@@ -19,14 +17,14 @@ import {
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 
-type addStudentFormTypes = z.infer<typeof addStudentSchema>;
+type AddStudentFormTypes = z.infer<typeof addStudentSchema>;
 
 const AddStudentForm = () => {
-  const form = useForm<addStudentFormTypes>({
+  const form = useForm<AddStudentFormTypes>({
     resolver: zodResolver(addStudentSchema),
   });
 
-  const onSubmit: SubmitHandler<addStudentFormTypes> = (data) => {
+  const onSubmit = (data: AddStudentFormTypes) => {
     console.log(data);
   };
 
@@ -49,7 +47,7 @@ const AddStudentForm = () => {
                     <FormItem>
                       <FormLabel>First Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="shadcn" {...field} />
+                        <Input placeholder="Enter first name" {...field} />
                       </FormControl>
                       <FormDescription>
                         This is your public display name.
