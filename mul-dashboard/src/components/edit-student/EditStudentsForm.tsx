@@ -19,9 +19,22 @@ import { Button } from "../ui/button";
 
 type AddStudentFormTypes = z.infer<typeof addStudentSchema>;
 
-const AddStudentForm = () => {
+const EditStudentForm = () => {
   const form = useForm<AddStudentFormTypes>({
     resolver: zodResolver(addStudentSchema),
+    defaultValues: {
+      first_name: "James",
+      last_name: "Mulabh",
+      email: "james@example.com",
+      registration_date: new Date(),
+      gender: "Male",
+      class: "Computer Science",
+      phone: "1234567890",
+      birth_date: new Date(),
+      blood_group: "A+",
+      roll_number: "202211087",
+      address: "123 Main St",
+    },
   });
 
   const onSubmit: SubmitHandler<AddStudentFormTypes> = (data) => {
@@ -33,7 +46,7 @@ const AddStudentForm = () => {
         <Card>
           <CardContent className="py-8">
             <CardTitle className="pb-8 md:text-2xl text-xl">
-              Add Student
+              Edit Student
             </CardTitle>
 
             <Form {...form}>
@@ -254,4 +267,4 @@ const AddStudentForm = () => {
   );
 };
 
-export default AddStudentForm;
+export default EditStudentForm;

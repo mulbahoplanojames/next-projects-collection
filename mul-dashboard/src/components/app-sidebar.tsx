@@ -71,7 +71,7 @@ const data = {
         },
         {
           title: "Edit Student",
-          url: "/edit-student",
+          url: "/edit-students",
         },
       ],
     },
