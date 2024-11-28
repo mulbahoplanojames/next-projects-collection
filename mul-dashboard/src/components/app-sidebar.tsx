@@ -82,15 +82,15 @@ const data = {
       items: [
         {
           title: "All Courses",
-          url: "#",
+          url: "/all-courses",
         },
         {
           title: "Add Course",
-          url: "#",
+          url: "/add-course",
         },
         {
           title: "Edit Course",
-          url: "#",
+          url: "/edit-courses",
         },
       ],
     },
@@ -192,7 +192,7 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar variant="inset" {...props}>
+    <Sidebar variant="inset" {...props} className="bg-primary_1">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
