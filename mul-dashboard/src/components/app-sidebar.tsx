@@ -119,16 +119,16 @@ const data = {
       icon: User,
       items: [
         {
-          title: "All Teachers",
-          url: "#",
+          title: "Teachers",
+          url: "/all-teachers",
         },
         {
           title: "Teacher Profile",
-          url: "#",
+          url: "/teacher-profile",
         },
         {
           title: "Add Teacher",
-          url: "#",
+          url: "/add-teacher",
         },
         {
           title: "Edit Teacher",
