@@ -1,4 +1,4 @@
-import AddCourseForm from "@/components/add-course/AddCourseForm";
+import AddCourseForm from "@/components/course/AddCourseForm";
 import DashboardHeader from "@/components/dash-header";
 
 const AddCourse = () => {

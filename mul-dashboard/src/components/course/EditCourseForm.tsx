@@ -18,7 +18,7 @@ import {
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import Swal from "sweetalert2";
-import CancelButton from "../add-course/CancelButton";
+import CancelButton from "./CancelButton";
 
 type CourseType = z.infer<typeof coursesSchema>;
 
