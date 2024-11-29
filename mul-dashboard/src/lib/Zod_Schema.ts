@@ -22,7 +22,7 @@ export const coursesSchema = z.object({
   course_title: z
     .string()
     .min(8, "Course Title must be at least 6 characters long"),
-  course_image: z.string(),
+  course_image: z.instanceof(File, { message: "Please select a course image" }),
   course_code: z
     .string()
     .min(3, "Course Code must be at least 3 characters long"),

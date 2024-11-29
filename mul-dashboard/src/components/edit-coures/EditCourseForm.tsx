@@ -17,14 +17,23 @@ import {
 } from "../ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import CancelButton from "./CancelButton";
 import Swal from "sweetalert2";
+import CancelButton from "../add-course/CancelButton";
 
 type CourseType = z.infer<typeof coursesSchema>;
 
-const AddCourseForm = () => {
+const EditCourseForm = () => {
   const form = useForm<CourseType>({
     resolver: zodResolver(coursesSchema),
+    defaultValues: {
+      course_title: "Computer Science",
+      course_code: "CSC101",
+      course_image: undefined,
+      professor: "John Doe",
+      duration: "2 months",
+      number_of_students: "20",
+      course_price: "1000",
+    },
   });
 
   const onSubmit: SubmitHandler<CourseType> = async (data) => {
@@ -33,7 +42,7 @@ const AddCourseForm = () => {
       Swal.fire({
         position: "top-end",
         icon: "success",
-        title: "Course Added Successfully",
+        title: "Course Edited Successfully",
         showConfirmButton: false,
         timer: 2000,
       });
@@ -48,7 +57,7 @@ const AddCourseForm = () => {
         <Card>
           <CardContent className="py-8">
             <CardTitle className="pb-8 md:text-2xl text-xl">
-              Add Course
+              Edit Course
             </CardTitle>
 
             <Form {...form}>
@@ -101,7 +110,7 @@ const AddCourseForm = () => {
                         <FormControl>
                           <Input
                             type="file"
-                            placeholder="Select course image"
+                            placeholder="Enter first name"
                             onChange={(e) => {
                               const file = e.target.files?.[0];
                               onChange(file);
@@ -197,4 +206,4 @@ const AddCourseForm = () => {
   );
 };
 
-export default AddCourseForm;
+export default EditCourseForm;

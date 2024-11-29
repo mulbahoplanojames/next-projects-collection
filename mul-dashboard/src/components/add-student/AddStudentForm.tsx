@@ -16,6 +16,7 @@ import {
 
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import Swal from "sweetalert2";
 
 type AddStudentFormTypes = z.infer<typeof addStudentSchema>;
 
@@ -24,8 +25,19 @@ const AddStudentForm = () => {
     resolver: zodResolver(addStudentSchema),
   });
 
-  const onSubmit: SubmitHandler<AddStudentFormTypes> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<AddStudentFormTypes> = async (data) => {
+    try {
+      console.log(data);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your work has been saved",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <>
