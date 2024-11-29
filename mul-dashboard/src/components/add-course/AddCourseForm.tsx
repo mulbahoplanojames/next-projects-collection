@@ -18,6 +18,7 @@ import {
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import CancelButton from "./CancelButton";
+import Swal from "sweetalert2";
 
 type CourseType = z.infer<typeof coursesSchema>;
 
@@ -26,8 +27,19 @@ const AddCourseForm = () => {
     resolver: zodResolver(coursesSchema),
   });
 
-  const onSubmit: SubmitHandler<CourseType> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<CourseType> = async (data) => {
+    try {
+      console.log(data);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Course Added Successfully",
+        showConfirmButton: false,
+        timer: 2000,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
