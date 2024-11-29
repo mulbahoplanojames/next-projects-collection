@@ -1,5 +1,5 @@
-import AllDepartmentsTable from "@/components/all-departments/AllDepartmentsTable";
 import DashboardHeader from "@/components/dash-header";
+import AllDepartmentsTable from "@/components/departments/AllDepartmentsTable";
 
 const AllDepartments = () => {
   return (

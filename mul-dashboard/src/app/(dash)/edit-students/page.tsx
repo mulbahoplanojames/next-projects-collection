@@ -1,5 +1,5 @@
 import DashboardHeader from "@/components/dash-header";
-import EditStudentForm from "@/components/edit-student/EditStudentsForm";
+import EditStudentForm from "@/components/students/EditStudentsForm";
 
 const EditStudents = () => {
   return (

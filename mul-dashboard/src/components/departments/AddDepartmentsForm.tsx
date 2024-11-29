@@ -6,7 +6,7 @@ import { Card, CardContent, CardTitle } from "../ui/card";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { coursesSchema } from "@/lib/Zod_Schema";
+import { departmentsSchema } from "@/lib/Zod_Schema";
 import {
   Form,
   FormControl,
@@ -17,22 +17,20 @@ import {
 } from "../ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import CancelButton from "./CancelButton";
 import Swal from "sweetalert2";
+import CancelButton from "../course/CancelButton";
 
-type CourseType = z.infer<typeof coursesSchema>;
+type CourseType = z.infer<typeof departmentsSchema>;
 
 const AddDepartmentForm = () => {
   const form = useForm<CourseType>({
-    resolver: zodResolver(coursesSchema),
+    resolver: zodResolver(departmentsSchema),
     defaultValues: {
-      course_title: "",
-      course_code: "",
-      course_image: undefined,
-      professor: "",
-      duration: "",
-      number_of_students: "",
-      course_price: "",
+      department_name: "",
+      head_of_department: "",
+      established_year: "",
+      student_capacity: "",
+      details: "",
     },
   });
 
@@ -69,53 +67,33 @@ const AddDepartmentForm = () => {
                 <div className="grid md:grid-cols-2 grid-cols-2 gap-4">
                   <FormField
                     control={form.control}
-                    name="course_title"
+                    name="department_name"
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="md:text-base text-base">
-                          Course Title
-                        </FormLabel>
-                        <FormControl>
-                          <Input placeholder="Enter first name" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="course_code"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="md:text-base text-base">
-                          Course Code
-                        </FormLabel>
-                        <FormControl>
-                          <Input placeholder="Enter first name" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-                <div className="">
-                  <FormField
-                    control={form.control}
-                    name="course_image"
-                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                    render={({ field: { value, onChange, ...field } }) => (
-                      <FormItem>
-                        <FormLabel className="md:text-base text-base">
-                          Course Image
+                          Department Name
                         </FormLabel>
                         <FormControl>
                           <Input
-                            type="file"
-                            placeholder="Select course image"
-                            onChange={(e) => {
-                              const file = e.target.files?.[0];
-                              onChange(file);
-                            }}
+                            placeholder="Enter Department Name"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="head_of_department"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="md:text-base text-base">
+                          Head of Department
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Enter Head of Department"
                             {...field}
                           />
                         </FormControl>
@@ -127,14 +105,17 @@ const AddDepartmentForm = () => {
                 <div className="grid md:grid-cols-2 grid-cols-2 gap-4">
                   <FormField
                     control={form.control}
-                    name="professor"
+                    name="established_year"
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="md:text-base text-base">
-                          Professor
+                          Established Year
                         </FormLabel>
                         <FormControl>
-                          <Input placeholder="Professor" {...field} />
+                          <Input
+                            placeholder="Enter Established Year"
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -142,46 +123,38 @@ const AddDepartmentForm = () => {
                   />
                   <FormField
                     control={form.control}
-                    name="duration"
+                    name="student_capacity"
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="md:text-base text-base">
-                          Duration
+                          Student Capacity
                         </FormLabel>
                         <FormControl>
-                          <Input placeholder="Duration" {...field} />
+                          <Input
+                            placeholder="Enter Student Capacity"
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
                 </div>
-                <div className="grid md:grid-cols-2 grid-cols-2 gap-4">
+                <div>
                   <FormField
                     control={form.control}
-                    name="number_of_students"
+                    name="details"
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="md:text-base text-base">
-                          Number of Students
+                          Details
                         </FormLabel>
                         <FormControl>
-                          <Input placeholder="Number of Students" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="course_price"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="md:text-base text-base">
-                          Course Price
-                        </FormLabel>
-                        <FormControl>
-                          <Input placeholder="Course Price" {...field} />
+                          <Input
+                            type="textarea"
+                            placeholder=" Enter Department Details"
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

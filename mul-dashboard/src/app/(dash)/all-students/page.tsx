@@ -1,5 +1,5 @@
-import AllStudentsTable from "@/components/all-students/AllStudentTable";
 import DashboardHeader from "@/components/dash-header";
+import AllStudentsTable from "@/components/students/AllStudentTable";
 import Link from "next/link";
 
 const AllStudents = () => {

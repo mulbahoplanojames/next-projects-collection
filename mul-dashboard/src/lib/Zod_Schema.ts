@@ -33,3 +33,19 @@ export const coursesSchema = z.object({
     .string()
     .min(3, "Course Price must be at least 3 characters long"),
 });
+
+export const departmentsSchema = z.object({
+  department_name: z
+    .string()
+    .min(3, "Department Name must be at least 3 characters long"),
+  head_of_department: z
+    .string()
+    .min(3, "Head of Department must be at least 3 characters long"),
+  established_year: z
+    .string()
+    .min(3, "Established Year must be at least 3 characters long"),
+  student_capacity: z
+    .string()
+    .min(3, "Student Capacity must be at least 3 characters long"),
+  details: z.string().min(5, "Details must be at least 5 characters long"),
+});
