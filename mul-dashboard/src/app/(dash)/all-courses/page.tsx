@@ -1,4 +1,5 @@
 import DashboardHeader from "@/components/dash-header";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import allCoursesData from "@/data/all-courses/data";
 import Image from "next/image";
@@ -13,7 +14,7 @@ const AllCourses = () => {
         <div className="grid lg:grid-cols-3 md:grid-cols-2 place-items-center gap-6 mt-12">
           {allCoursesData.map((course) => (
             <Card key={course.course_id}>
-              <CardContent className="hover:bg-primary_1 hover:rounded-md hover:text-white">
+              <CardContent className="hover:bg-primary_1 group hover:rounded-md hover:text-white">
                 <CardHeader className="rounded-md">
                   <Image src={course.course_image} alt={course.course_title} />
                 </CardHeader>
@@ -23,6 +24,9 @@ const AllCourses = () => {
                   <p>{course.duration}</p>
                   <p>{course.number_of_students} Students</p>
                 </div>
+                <Button className="bg-primary_1 mt-4 group-hover:bg-white group-hover:text-primary_1">
+                  Details
+                </Button>
               </CardContent>
             </Card>
           ))}

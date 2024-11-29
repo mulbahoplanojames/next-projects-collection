@@ -17,3 +17,19 @@ export const addStudentSchema = z.object({
   blood_group: z.string(),
   address: z.string(),
 });
+
+export const coursesSchema = z.object({
+  course_title: z
+    .string()
+    .min(8, "Course Title must be at least 6 characters long"),
+  course_image: z.string(),
+  course_code: z
+    .string()
+    .min(3, "Course Code must be at least 3 characters long"),
+  professor: z.string().min(3, "Professor must be at least 3 characters long"),
+  duration: z.string().min(6, "Duration must be at least 6 characters long"),
+  number_of_students: z.string(),
+  course_price: z
+    .string()
+    .min(3, "Course Price must be at least 3 characters long"),
+});
