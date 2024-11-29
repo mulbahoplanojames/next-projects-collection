@@ -16,6 +16,7 @@ import {
 
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import Swal from "sweetalert2";
 
 type AddStudentFormTypes = z.infer<typeof addStudentSchema>;
 
@@ -37,8 +38,21 @@ const EditStudentForm = () => {
     },
   });
 
-  const onSubmit: SubmitHandler<AddStudentFormTypes> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<AddStudentFormTypes> = async (data) => {
+    try {
+      console.log(data);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Student Edited Successfully",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+
+      form.reset();
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <>

@@ -25,6 +25,15 @@ type CourseType = z.infer<typeof coursesSchema>;
 const AddCourseForm = () => {
   const form = useForm<CourseType>({
     resolver: zodResolver(coursesSchema),
+    defaultValues: {
+      course_title: "",
+      course_code: "",
+      course_image: undefined,
+      professor: "",
+      duration: "",
+      number_of_students: "",
+      course_price: "",
+    },
   });
 
   const onSubmit: SubmitHandler<CourseType> = async (data) => {
@@ -37,6 +46,7 @@ const AddCourseForm = () => {
         showConfirmButton: false,
         timer: 2000,
       });
+      form.reset();
     } catch (error) {
       console.log(error);
     }

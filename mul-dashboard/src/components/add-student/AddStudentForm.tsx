@@ -23,6 +23,19 @@ type AddStudentFormTypes = z.infer<typeof addStudentSchema>;
 const AddStudentForm = () => {
   const form = useForm<AddStudentFormTypes>({
     resolver: zodResolver(addStudentSchema),
+    defaultValues: {
+      first_name: "",
+      last_name: "",
+      email: "",
+      registration_date: new Date(),
+      gender: "",
+      class: "",
+      phone: "",
+      birth_date: new Date(),
+      blood_group: "",
+      roll_number: "",
+      address: "",
+    },
   });
 
   const onSubmit: SubmitHandler<AddStudentFormTypes> = async (data) => {
@@ -31,10 +44,12 @@ const AddStudentForm = () => {
       Swal.fire({
         position: "top-end",
         icon: "success",
-        title: "Your work has been saved",
+        title: "Student Added Successfully",
         showConfirmButton: false,
         timer: 1500,
       });
+
+      form.reset();
     } catch (error) {
       console.log(error);
     }
