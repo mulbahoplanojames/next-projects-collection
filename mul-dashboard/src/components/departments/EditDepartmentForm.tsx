@@ -23,15 +23,16 @@ import CancelButton from "../course/CancelButton";
 
 type CourseType = z.infer<typeof departmentsSchema>;
 
-const AddDepartmentForm = () => {
+const EditDepartmentForm = () => {
   const form = useForm<CourseType>({
     resolver: zodResolver(departmentsSchema),
     defaultValues: {
-      department_name: "",
-      head_of_department: "",
-      established_year: "",
-      student_capacity: "",
-      details: "",
+      department_name: "Software Engineering",
+      head_of_department: "Oplano James",
+      established_year: "1999",
+      student_capacity: "500",
+      details:
+        "Software Engineering Department is a department of the University of Colombo School of Computing that focuses on software engineering and related topics.",
     },
   });
 
@@ -41,7 +42,7 @@ const AddDepartmentForm = () => {
       Swal.fire({
         position: "top-end",
         icon: "success",
-        title: "Department Added Successfully",
+        title: "Department Edited Successfully",
         showConfirmButton: false,
         timer: 2000,
       });
@@ -181,4 +182,4 @@ const AddDepartmentForm = () => {
   );
 };
 
-export default AddDepartmentForm;
+export default EditDepartmentForm;
