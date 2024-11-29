@@ -101,19 +101,15 @@ const data = {
       items: [
         {
           title: "All Departments",
-          url: "#",
+          url: "/all-departments",
         },
         {
           title: "Add Department",
-          url: "#",
+          url: "/add-departments",
         },
         {
           title: "Edit Department",
-          url: "#",
-        },
-        {
-          title: "Delete Department",
-          url: "#",
+          url: "/edit-departments",
         },
       ],
     },

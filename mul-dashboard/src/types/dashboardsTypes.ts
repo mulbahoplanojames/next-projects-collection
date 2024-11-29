@@ -47,3 +47,13 @@ export type allStudentsGridViewTypes = {
   city: string;
   contact: string;
 };
+
+export type allDepartmentsDataTypes = {
+  id?: number;
+  departmentName: string;
+  headOfDepartment: string;
+  Phone: string;
+  Email: string;
+  establishDate: number;
+  studentCapacity: number;
+};

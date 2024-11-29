@@ -1,4 +1,4 @@
-import AllStudentsTable from "@/components/all-students/tables/AllStudentTable";
+import AllStudentsTable from "@/components/all-students/AllStudentTable";
 import DashboardHeader from "@/components/dash-header";
 import Link from "next/link";
 
