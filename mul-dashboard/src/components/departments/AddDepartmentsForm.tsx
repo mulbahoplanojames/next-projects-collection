@@ -16,6 +16,7 @@ import {
   FormMessage,
 } from "../ui/form";
 import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import Swal from "sweetalert2";
 import CancelButton from "../course/CancelButton";
@@ -150,9 +151,9 @@ const AddDepartmentForm = () => {
                           Details
                         </FormLabel>
                         <FormControl>
-                          <Input
-                            type="textarea"
-                            placeholder=" Enter Department Details"
+                          <Textarea
+                            placeholder="Enter Depatment Details"
+                            className="resize-none"
                             {...field}
                           />
                         </FormControl>
