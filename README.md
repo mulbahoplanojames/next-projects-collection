@@ -15,12 +15,12 @@ A comprehensive 🚀 collection of my personal Next.js projects 📁 showcasing 
 
 ## 📁 Repository Structure
 
-This repository is organized to maintain multiple Next.js projects, each demonstrating different aspects of web development:
+This repository is organized to maintain all of my personal Next.js projects, each demonstrating different aspects of web development:
 
 ```
 next-projects-collection/
-├── project-1/
-├── project-2/
+├── mul-dashboard/
+├── abdo_portfolio/
 ├── project-3/
 └── ...
 ```
