@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Readex_Pro } from "next/font/google";
+import { Nunito, Readex_Pro } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/layout/Navbar";
 import Footer from "@/layout/Footer";
@@ -10,6 +10,13 @@ const readexPro = Readex_Pro({
   weight: ["400", "500", "600", "700"],
   style: ["normal"],
   display: "swap",
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${readexPro.className} antialiased flex flex-col min-h-screen bg-background_main text-text_primary`}
+        className={`${readexPro.className} ${nunito.variable} antialiased flex flex-col min-h-screen bg-background_main text-text_primary`}
       >
         <Navbar />
         <main className="flex-1">{children}</main>

@@ -1,18 +1,18 @@
 export const navlinks = [
   {
     title: "Home",
-    url: "home",
+    url: "/home",
   },
   {
     title: "About",
-    url: "about",
+    url: "/about",
   },
   {
     title: "Blog",
-    url: "blog",
+    url: "/blog",
   },
   {
     title: "My Projects",
-    url: "projects",
+    url: "/projects",
   },
 ];
