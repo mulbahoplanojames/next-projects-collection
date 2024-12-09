@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
+import { Readex_Pro } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/layout/Navbar";
 import Footer from "@/layout/Footer";
 
-const playfairDisplay = Playfair_Display({
+const readexPro = Readex_Pro({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-readex-pro",
   weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  style: ["normal"],
   display: "swap",
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfairDisplay.className} antialiased flex flex-col min-h-screen bg-background_main text-text_primary`}
+        className={`${readexPro.className} antialiased flex flex-col min-h-screen bg-background_main text-text_primary`}
       >
         <Navbar />
         <main className="flex-1">{children}</main>

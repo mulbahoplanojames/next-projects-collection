@@ -24,13 +24,13 @@ const MobileNav = () => {
         <SheetTrigger asChild className="md:hidden">
           <Logs size={40} />
         </SheetTrigger>
-        <SheetContent className="bg-gradient-to-r from-background_main via-primary_main to-primary_main">
+        <SheetContent className="bg-primary_main">
           <SheetHeader>
             <SheetTitle className="text-3xl pt-2 text-text_primary text-left">
               AbdoDev
             </SheetTitle>
           </SheetHeader>
-          <div className="flex flex-col space-y-8 py-10">
+          <div className="flex flex-col space-y-6 py-6">
             {navlinks.map((link) => (
               <SheetClose asChild key={link.url}>
                 <Link

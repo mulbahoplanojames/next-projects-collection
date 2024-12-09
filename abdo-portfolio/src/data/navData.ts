@@ -8,6 +8,10 @@ export const navlinks = [
     url: "about",
   },
   {
+    title: "Blog",
+    url: "blog",
+  },
+  {
     title: "My Projects",
     url: "projects",
   },
