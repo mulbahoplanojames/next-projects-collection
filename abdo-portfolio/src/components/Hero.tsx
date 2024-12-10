@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <>
       <section
-        className="w-full py-12 bg-gray-900 md:px-20 px-2 grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center"
+        className="w-full py-12  md:px-20 px-2 grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center"
         id="/home"
       >
         <div className="md:w-[90%] w-full py-4 md:px-4 px-0">
