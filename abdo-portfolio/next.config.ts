@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "assets.aceternity.com",
+        hostname: "cdn.dummyjson.com",
         port: "",
         pathname: "/**",
       },

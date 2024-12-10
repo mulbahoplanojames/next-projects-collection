@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full flex items-center justify-between py-3 px-4 md:px-8 lg:px-12 backdrop-blur-[21px] backdrop-saturate-200 bg-gradient-to-r from-[rgba(0,137,143,0.49)] via-[#212832] to-[#0A0E11] sticky top-0 z-50">
+      <nav className="w-full flex items-center justify-between py-3 px-4 md:px-4 lg:px-12 backdrop-blur-[21px] backdrop-saturate-200 bg-gradient-to-r from-[rgba(0,137,143,0.49)] via-[#212832] to-[#0A0E11] sticky top-0 z-50">
         <ScrollLink
           to="home"
           smooth={true}
@@ -47,7 +47,7 @@ const Navbar = () => {
           AbdoDev
         </ScrollLink>
 
-        <menu className="hidden md:flex lg:space-x-24 md:space-x-16">
+        <menu className="hidden md:flex lg:space-x-16 md:space-x-12">
           {navlinks.map((link) => (
             <ScrollLink
               key={link.url}
