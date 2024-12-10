@@ -35,11 +35,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="w-full font-sans md:px-10 " ref={containerRef}>
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto pt-28 pb-6 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-text_primary max-w-4xl">
           My Professional Experience
         </h2>
-        <p className="text-text_primary  text-sm md:text-base max-w-lg">
+        <p className="text-text_primary  text-sm md:text-lg max-w-2xl">
           I have had the privilege of working on a wide range of projects,
           including web development, mobile app development, and software
           development. My experience in these fields has allowed me to develop a
