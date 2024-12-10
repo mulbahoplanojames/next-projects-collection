@@ -43,7 +43,7 @@ const Blog = async () => {
                 <CardContent className="">
                   <Link
                     rel="noopener noreferrer"
-                    href="#"
+                    href={`/blog/${post.id}`}
                     className="max-w-sm mx-auto group hover:no-underline focus:no-underline relative "
                   >
                     <CardHeader className="w-full rounded h-56 overflow-hidden relative ">
