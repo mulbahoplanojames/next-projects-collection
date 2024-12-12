@@ -5,3 +5,10 @@ export type blogType = {
   thumbnail: string;
   createdAt?: string;
 };
+
+
+export type testTypes = {
+  id: number,
+  name: string,
+
+}

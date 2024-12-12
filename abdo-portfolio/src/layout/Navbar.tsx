@@ -6,32 +6,26 @@ import { Link as ScrollLink } from "react-scroll";
 import MobileNav from "./MobileNav";
 
 import {
-  Element,
-  Events,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   animateScroll as scroll,
-  scrollSpy,
+  // scrollSpy,
 } from "react-scroll";
 
 const Navbar = () => {
   // Defining functions to perform different types of scrolling.
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+  // const scrollToTop = () => {
+  //   scroll.scrollToTop();
+  // };
 
-  const scrollToBottom = () => {
-    scroll.scrollToBottom();
-  };
+  // const scrollToBottom = () => {
+  //   scroll.scrollToBottom();
+  // };
 
-  const scrollTo = () => {
-    scroll.scrollTo(100); // Scrolling to 100px from the top of the page.
-  };
+  // const scrollTo = () => {
+  //   scroll.scrollTo(100);
+  // };
 
-  const scrollMore = () => {
-    scroll.scrollMore(100); // Scrolling an additional 100px from the current scroll position.
-  };
-
-  // Function to handle the activation of a link.
-  const handleSetActive = (to) => {
+  const handleSetActive = (to: unknown) => {
     console.log(to);
   };
 
