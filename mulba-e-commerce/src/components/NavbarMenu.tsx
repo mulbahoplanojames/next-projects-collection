@@ -15,7 +15,9 @@ const NavbarMenu = () => {
             <Link
               href={link.href}
               key={link.label}
-              className={`text-lg ${isActive ? "border-b-2" : "text-gray-500"}`}
+              className={`text-base ${
+                isActive ? "border-b-2" : "text-gray-500"
+              }`}
             >
               {link.label}
             </Link>
