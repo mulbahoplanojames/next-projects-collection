@@ -4,8 +4,9 @@ import SearchBar from "@/components/SearchBar";
 import { Button } from "@/components/ui/button";
 import { ClerkLoaded, SignedIn, SignInButton, UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
-import { ListOrdered, Menu } from "lucide-react";
+import { ListOrdered } from "lucide-react";
 import Link from "next/link";
+import { MobileNavbar } from "./MobileNavbar";
 
 const Navbar = async () => {
   const user = await currentUser();
@@ -14,7 +15,7 @@ const Navbar = async () => {
     <>
       <nav className="flex justify-between items-center py-4 lg:px-20 md:px-8 px-4 border-b">
         <div className="flex gap-3 items-center">
-          <Menu className="cursor-pointer md:hidden block" />
+          <MobileNavbar />
           <h2 className="md:text-2xl text-xl font-semibold">Mulba</h2>
         </div>
         <NavbarMenu />
